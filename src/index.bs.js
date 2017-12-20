@@ -8,6 +8,6 @@ var App$ReactTemplate = require("./app.bs.js");
 require('imperavi-kube/dist/css/kube.css');
 ;
 
-ReactDOMRe.renderToElementWithId(ReasonReact.element(/* None */0, /* None */0, App$ReactTemplate.make(/* array */[])), "app");
+ReactDOMRe.renderToElementWithId(ReasonReact.element(/* None */0, /* None */0, App$ReactTemplate.make(/* array */[])), "index");
 
 /*  Not a pure module */
