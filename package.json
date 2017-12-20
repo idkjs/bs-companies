@@ -1,14 +1,6 @@
 {
   "name": "bs-companies",
   "version": "0.1.0",
-  "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
-    "dev:server": "nodemon ./src/server/server.bs.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack -w"
-  },
   "keywords": [
     "BuckleScript"
   ],
@@ -20,15 +12,32 @@
     "bs-fetch": "^0.2.0",
     "bs-jest": "^0.2.0",
     "bs-json": "^0.2.4",
+    "bs-loader": "^2.0.0",
+    "bs-webapi": "^0.7.0",
     "cors": "^2.8.4",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
     "imperavi-kube": "^6.5.2",
     "nodemon": "^1.14.0",
+    "npm-run-all": "^4.1.2",
+    "purecss": "^1.0.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "reason-js": "^0.3.0",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-html-plugin": "^0.1.1"
   },
   "devDependencies": {
     "bs-platform": "^2.1.0",
-    "reason-react": "^0.3.0",
-    "webpack": "^3.8.1"
+    "reason-react": "^0.3.0"
+  },
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "bsb": "npm run build:bsb -- -w",
+    "dev:webpack": "webpack-dev-server -w",
+    "build:bsb": "bsb -make-world",
+    "dev:server": "nodemon ./lib/js/src/server/server.js"
   }
 }

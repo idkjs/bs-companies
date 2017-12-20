@@ -5,8 +5,16 @@
   },
   "sources": [
     {
-      "dir": "src",
-      "subdirs": true
+      "dir": "src/model"
+    },
+    {
+      "dir": "src/client"
+    },
+    {
+      "dir": "src/server"
+    },
+    {
+      "dir": "src/utils"
     }
   ],
   "bs-dependencies": [
@@ -16,13 +24,5 @@
     "bs-fetch",
     "bs-jest"
   ],
-  "package-specs": [
-    {
-      "module": "commonjs",
-      "in-source": true
-    }
-  ],
-  "suffix": ".bs.js",
-  "namespace": true,
   "refmt": 3
 }
