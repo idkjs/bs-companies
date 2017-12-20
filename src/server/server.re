@@ -6,12 +6,17 @@ open Company;
 
 open Employee;
 
+[@bs.module] external cors : 'a => Express.Middleware.t = "";
+
 let app = express();
 
-[%%bs.raw {|
+[%%bs.raw
+  {|
 var bodyParser = require('body-parser');
+app.use(cors());
 app.use(bodyParser.json());
-|}];
+|}
+];
 
 let companies: ref(list(company)) =
   ref([
