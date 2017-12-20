@@ -1,5 +1,5 @@
-const HtmlPlugin = require('webpack-html-plugin')
-const join = require('path').join
+const HtmlPlugin = require('webpack-html-plugin');
+const join = require('path').join;
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const stats = {
@@ -10,8 +10,8 @@ const stats = {
 module.exports = [{
   entry: './src/client',
   output: {
-    filename: 'index.re',
-    path: join(__dirname, 'bundle'),
+    filename: 'index.js',
+    path: join(__dirname, 'build'),
     publicPath: '/',
   },
   plugins: [

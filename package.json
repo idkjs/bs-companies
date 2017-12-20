@@ -4,6 +4,7 @@
   "keywords": [
     "BuckleScript"
   ],
+  "main": "index.js",
   "author": "",
   "license": "MIT",
   "dependencies": {
