@@ -8,14 +8,10 @@ open Employee;
 
 let app = express();
 
-[%%bs.raw
-  {|
+[%%bs.raw {|
 var bodyParser = require('body-parser');
-var cors = require('cors');
-app.use(cors());
 app.use(bodyParser.json());
-|}
-];
+|}];
 
 let companies: ref(list(company)) =
   ref([
